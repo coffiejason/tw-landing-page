@@ -1,4 +1,23 @@
 import React from 'react'
+import { Card } from '../../units'
+
+const features = [
+    {
+        id: 1,
+        title: '100%',
+        subtitle: 'Completion'
+    },
+    {
+        id: 2,
+        title: '24/7',
+        subtitle: 'Delivery'
+    },
+    {
+        id: 3,
+        title: '100k',
+        subtitle: 'Transactions'
+    }
+]
 
 const About = () => (
     <div className='w-full my-32'>
@@ -9,20 +28,12 @@ const About = () => (
             </div>
 
             <div className='grid md:grid-cols-3 gap-1 px-2 text-center'>
-                <div className='border py-8 rounded-xl shadow-xl'>
-                    <p className='text-6xl font-bold text-indigo-600'>100%</p>
-                    <p className='text-gray-400 mt-2'>Completion</p>
-                </div>
+                {
+                    features.map((item)=>(
+                        <Card key={item.id} title={item.title} subtitle={item.subtitle}/>
+                    ))
+                }
 
-                <div className='border py-8 rounded-xl shadow-xl'>
-                    <p className='text-6xl font-bold text-indigo-600'>24/7</p>
-                    <p className='text-gray-400 mt-2'>Delivery</p>
-                </div>
-
-                <div className='border py-8 rounded-xl shadow-xl'>
-                    <p className='text-6xl font-bold text-indigo-600'>100K</p>
-                    <p className='text-gray-400 mt-2'>Transactions</p>
-                </div>
             </div>
         </div>
     </div>
