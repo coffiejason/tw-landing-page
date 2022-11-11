@@ -1,5 +1,5 @@
 import React from 'react'
-import { About, HeroSection, Navbar, Support } from './components'
+import { About, AllInOne, HeroSection, Navbar, Support } from './components'
 import styles from './style'
 
 const App = () => (
@@ -8,6 +8,7 @@ const App = () => (
     <HeroSection />
     <About />
     <Support />
+    <AllInOne />
   </>
 )
 
